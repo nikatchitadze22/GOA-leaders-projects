@@ -10,3 +10,15 @@ body{
     border-radius: 20px;
     height: fit-content;
 }
+
+#home{
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 3px;
+}
+
+#home:hover{
+    color: white;
+    background-color: blue;
+    transition: 0.25s;
+}

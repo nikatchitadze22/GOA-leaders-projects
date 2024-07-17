@@ -8,3 +8,27 @@
 
 }
 
+.atag{
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.atag:hover{
+    color: white;
+    background-color: blue;
+    transition: 0.25s;
+}
+
+#btn{
+    margin-left: 5 px;
+    color: blue;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+#btn:hover{
+    color: white;
+    background-color: blue;
+    transition: 0.25s;
+}
