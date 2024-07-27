@@ -20,6 +20,8 @@
 }
 
 #btn{
+    width: 50px;
+    height: 50px;
     margin-left: 5 px;
     color: blue;
     background-color: white;
@@ -28,7 +30,38 @@
 }
 
 #btn:hover{
-    color: white;
-    background-color: blue;
-    transition: 0.25s;
+    animation: firstanimation 2s infinite 0s ease;
+}
+
+@keyframes firstanimation {
+    0% {
+        background-color: red;
+        color: white;
+    }
+
+    20% {
+        background-color: yellow;
+        color: white;
+    }
+
+    40% {
+       background-color: purple;
+       color: white;
+    }
+
+    60% {
+        background-color: blue;
+        color: white;
+    }
+
+    80% {
+        background-color: salmon;
+        color: white;
+    }
+
+    100% {
+        background-color: white;
+        transition-timing-function: ease-in-out;
+        transform: rotate(360deg);
+    }
 }
