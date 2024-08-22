@@ -19,6 +19,6 @@ body{
 
 #home:hover{
     color: white;
-    background-color: blue;
+    background-color: green;
     transition: 0.25s;
 }

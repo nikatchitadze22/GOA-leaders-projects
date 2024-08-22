@@ -1,67 +1,166 @@
 .title{
-    background-color: gray;
+    background-image: url(./zgoa_logo.png);
+    background-size: 1860px;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    height: 100px;
+    height: 250px;
     width: 100%;
     align-items: center;
 
 }
 
+.half1div{
+    display: grid;
+    grid-template-columns: 800px 800px;
+}
+
+.novatori1 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+}
+
+.image-container {
+    position: relative;
+}
+
+#line {
+    display: block;
+    width: 150px;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    animation: show-line 6s 4s forwards;
+}
+
+#rocket {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-75deg);
+    animation: rocket-animation 6s 4s forwards;
+    z-index: 2;
+}
+
+@keyframes rocket-animation {
+    0% {
+        transform: translateX(-50%) translateY(0) rotate(-75deg);
+        z-index: 2;
+    }
+    50% {
+        transform: translateX(-50%) translateY(-200px) rotate(465deg);
+        z-index: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0) rotate(465deg);
+        z-index: 1;
+    }
+}
+
+@keyframes show-line {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 .atag{
     border: 1px solid transparent;
     border-radius: 5px;
+    color: green;
 }
 
 .atag:hover{
     color: white;
-    background-color: blue;
+    background-color: green;
     transition: 0.25s;
 }
 
-#btn{
-    width: 50px;
-    height: 50px;
-    margin-left: 5 px;
-    color: blue;
-    background-color: white;
-    border: 1px solid blue;
-    border-radius: 10px;
+
+
+.a{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: green;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 170px;
+    height: 15px;
 }
 
-#btn:hover{
-    animation: firstanimation 2s infinite 0s ease;
+.a:hover{
+    transition: 0.25s;
+    animation: aanimation 1s 0s ease;
+}
+
+@keyframes aanimation {
+    0% {
+        background-color: white;
+        width: 170px;
+        height: 15px;
+        color: green;
+    }
+
+    50% {
+        background-color: green;
+        color: white;
+        width: 300px;
+        height: 15px;
+    }
+    
+    100% {
+        background-color: white;
+        width: 170px;
+        height: 15px;
+        color: green;
+    }
+}
+
+
+
+
+#btn {
+    width: 80px;
+    height: 50px;
+    margin-left: 5px;
+    color: green;
+    background-color: white;
+    border: 1px solid green;
+    border-radius: 10px;
+    box-shadow: 6px 4px 4px #a99c9c;
+}
+
+#btn:hover {
+    animation: firstanimation 2s 0s ease forwards;
+    box-shadow: 6px 4px 4px #000000; 
 }
 
 @keyframes firstanimation {
     0% {
-        background-color: red;
+        background-color: white;
+        width: 80px;
+        height: 50px;
+        color: green;
+    }
+    50% {
+        background-color: green;
         color: white;
+        width: 200px;
+        height: 70px;
     }
-
-    20% {
-        background-color: yellow;
-        color: white;
-    }
-
-    40% {
-       background-color: purple;
-       color: white;
-    }
-
-    60% {
-        background-color: blue;
-        color: white;
-    }
-
-    80% {
-        background-color: salmon;
-        color: white;
-    }
-
     100% {
         background-color: white;
-        transition-timing-function: ease-in-out;
-        transform: rotate(360deg);
+        width: 80px;
+        height: 50px;
+        color: green;
     }
 }
